@@ -1,0 +1,192 @@
+
+/* Resolution size 320x568 */
+    @media (min-width: 320px) {
+            .col-sm-offset-2 {
+                margin-left: 23%;
+            }
+            .form-control {
+                padding: 30px 12px;
+            }
+            input, label, .form-control {
+                font-size: 20px;
+            }
+            .ui-widget{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.7em;
+                background-color:white;
+                color: black;
+                width: 580px;
+            }
+            .ui-widget-header {
+            border: 1px solid #dddddd;
+            background: #4968c6;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            }
+           div.raspberry {
+            float: left;
+            margin: 2px;
+            
+            }
+            .img {
+                width:"50";
+                height:"50";
+            }
+
+/* Resolution size 320x568 */
+    @media (min-width: 667px) {
+        .col-sm-offset-2 {
+            margin-left: 23%;
+            margin-top: 40px;
+        }
+        .form-horizontal{
+            padding-top: 30px;
+            margin-left: -151px;
+        }
+        .form-control {
+            padding: 30px 12px;
+            height: 30px;
+            width: 150%;
+            margin: 20px auto;
+        }
+        .form-horizontal .control-label{
+            padding-top: 7px;
+            margin: 20px;
+            text-align: right;
+        }
+        input, label, .form-control {
+            font-size: 24px;
+        }.dialog{
+            font-size: 30px;
+        }
+        .ui-widget{
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 1.7em;
+            background-color:white;
+            color: black;
+            width: 580px;
+        }
+        .ui-widget-header {
+            border: 1px solid #dddddd;
+            background: #4968c6;
+            color: white;
+            font-weight: bold;
+        }          
+        .img {
+            width:"450";
+            height:"450";
+    }
+
+    @media (min-width: 1024px) {
+        .col-sm-offset-2 {
+        margin-left: 23%;
+        margin-top: 40px;
+        }
+        .form-control {
+            padding: 30px 12px;
+            height: 30px;
+            width: 150%;
+            margin: 20px auto;
+        }
+        .form-horizontal .control-label{
+            padding-top: 7px;
+            margin: 20px;
+            text-align: right;
+        }
+        input, label, .form-control {
+            font-size: 30px;
+        }
+        .dlog{
+            font-size: 30px;
+            width: 580px;
+            text-align: center;
+            color: white;
+            background-color: blue;
+        }
+        .ui-widget{
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 1.7em;
+            background-color:white;
+            color: black;
+            width: 580px;
+        }
+        .ui-widget-header {
+        border: 1px solid #dddddd;
+        background: #4968c6;
+        color: white;
+        font-weight: bold;
+        }
+    }
+
+    
+
+    .box-dialog {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        background-color: rgba(0,0,0,.8);
+        z-index: 100;
+        opacity: .8;
+        transition: opacity .2s ease;
+        cursor: pointer;
+    }
+
+    .box-dialog .dialog {
+        z-index: 2000;
+        margin-top: 65%;
+        background-color: white;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 30px;
+    }
+
+    .hide {
+        display: none;
+    }
+    .logo{
+       text-align: center;
+    }
+    .icon {
+    padding-left: 15px;
+    padding-top: 15px;
+    height: 40px;
+    width: 40px;
+    }
+    .h3{
+        text-align: center;
+        color: grey;
+        margin-top: 1px;
+        margin-bottom: 20px;
+    }
+    .meeting{
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .buttom{
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .span{
+        text-align: center;
+    }
+   div.raspberry {
+    float: left;
+    margin: 2px;
+    width:"150";
+    height:"150";
+
+    }
+    div p {
+        text-align: center;
+    }
+    }
+}

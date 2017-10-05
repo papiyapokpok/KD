@@ -1,0 +1,94 @@
+<?php
+
+include "connect.php";
+$con = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+$username = $_POST["name"];
+$email = $_POST["email"];
+$tel = $_POST["tel"];
+$company = $_POST["company"];
+
+
+$sql = "INSERT INTO logwifi (username, email, tel, company)
+VALUES ($username, $email, $tel, $company)";
+
+if ($con->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $con->error;
+}
+
+$con->close();
+
+ ?>
+
+
+
+ <?php
+ 	session_start();
+  include "connect.php";
+  $con = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+
+ 	if(trim($_POST["name"]) == "")
+ 	{
+ 		echo "Please input username!";
+ 		exit();
+ 	}
+
+ 	if(trim($_POST["email"]) == "")
+ 	{
+ 		echo "Please input email!";
+ 		exit();
+ 	}
+
+ 	if(trim($_POST["tel"]) == "")
+ 	{
+ 		echo "Please input tel!";
+ 		exit();
+ 	}
+
+ 	if(trim($_POST["company"]) == "")
+ 	{
+ 		echo "Please input company!";
+ 		exit();
+ 	}
+
+ 	$strSQL = "SELECT * FROM logwifi WHERE username = '".trim($_POST['name'])."' ";
+ 	$objQuery = mysql_query($strSQL);
+ 	$objResult = mysql_fetch_array($objQuery);
+ 	if($objResult)
+ 	{
+ 			echo "Username already exists!";
+ 	}
+ 	else
+ 	{
+
+ 		$strSQL = "INSERT INTO logwifi (username, email, tel, company)
+                VALUES ('".$_POST["name"]."', '".$_POST["email"]."','".$_POST["tel"]."' ,'".$_POST["company"]."')";
+ 		$objQuery = mysql_query($strSQL);
+
+ 		$Uid = mysql_insert_id();
+ 		echo "Register Completed!<br>Please check your email to activate account";
+
+ 	// 	$strTo = $_POST["txtEmail"];
+ 	// 	$strSubject = "Activate Member Account";
+ 	// 	$strHeader = "Content-type: text/html; charset=windows-874\n"; // or UTF-8 //
+ 	// 	$strHeader .= "From: webmaster@thaicreate.com\nReply-To: webmaster@thaicreate.com";
+ 	// 	$strMessage = "";
+ 	// 	$strMessage .= "Welcome : ".$_POST["txtName"]."<br>";
+ 	// 	$strMessage .= "=================================<br>";
+ 	// 	$strMessage .= "Activate account click here.<br>";
+ 	// 	$strMessage .= "http://www.thaicreate.com/activate.php?sid=".session_id()."&uid=".$Uid."<br>";
+ 	// 	$strMessage .= "=================================<br>";
+ 	// 	$strMessage .= "ThaiCreate.Com<br>";
+    //
+ 	// 	$flgSend = mail($strTo,$strSubject,$strMessage,$strHeader);
+
+ 	}
+
+ 	mysql_close();
+ ?>
